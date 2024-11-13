@@ -26,7 +26,7 @@ function createHeart() {
 
     heart.addEventListener('click', () => {
         heartClickCount++;
-        if (heartClickCount > 3) {
+        if (heartClickCount > 2) {
             showModal();
         }
 
