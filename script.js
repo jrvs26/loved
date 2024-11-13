@@ -74,7 +74,7 @@ function showModal() {
         messageModal.innerHTML = `
         <div class="modal-content">
             <p class="message">${
-                name.toLowerCase() === "angela irish alday" && age > 23
+                name.toLowerCase() === "angela irish alday" && age >= 23
                     ? "Hi crush kita"
                     : "I don't even know you"
             }</p>
@@ -83,7 +83,7 @@ function showModal() {
         `;
         document.body.appendChild(messageModal);
 
-        if (name.toLowerCase() === "angela irish alday" && age > 23) {
+        if (name.toLowerCase() === "angela irish alday" && age >= 23) {
             const audio = new Audio('photograph.mp3');
             audio.play();
             audio.loop = true;
