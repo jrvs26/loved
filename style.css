@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Lobster&family=Sour+Gummy&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1#instruction {
+    cursor: default;
+    z-index: 50;
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: "Sour Gummy", sans-serif;
+    background: linear-gradient(
+    to right,
+    blue 0%,
+    red 20%,
+    pink 40%,
+    violet 60%,
+    yellow 80%,
+    green 100%
+);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+.bubble {
+    cursor: pointer;
+    position: absolute;
+    bottom: -50px;
+    opacity: 0;
+    animation: floatUp 5s infinite ease-in-out;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateX(0) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translateY(-100px) scale(0.75);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: translateY(-200px) scale(1);
+        opacity: 0.6;
+    }
+
+    60% {
+        transform: translateY(-300px) scale(1.25);
+        opacity: 0.8;
+    }
+
+    80% {
+        transform: translateY(-400px) scale(1.4);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-500px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.element {
+    animation: floatUp 5s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: start;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.modal-content input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+
+
+.modal-content button {
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button[type="submit"] {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.modal-content button#closeModal, button#closeMessageModal {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.modal-content button:hover {
+    opacity: 0.9;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5); /* Increase size to simulate explosion */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0); /* Shrink the heart */
+        opacity: 0; /* Fade out */
+    }
+}
+
+.popped {
+    animation: pop 0.6s forwards; /* Apply pop animation */
+}
+
+.modal-content p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    cursor: default;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1#instruction {
+        text-align: center;
+    }
+  }
