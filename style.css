@@ -79,7 +79,6 @@ h1#instruction {
 }
 
 .modal {
-    margin: 0 0 1rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -183,5 +182,9 @@ h1#instruction {
 @media only screen and (max-width: 768px) {
     h1#instruction {
         text-align: center;
+    }
+
+    .modal-content {
+        margin: 0 0 1rem 1rem;
     }
   }
