@@ -67,9 +67,8 @@ function showModal() {
         const name = document.getElementById("name").value.trim();
         const age = parseInt(document.getElementById("age").value, 10);
 
-        modal.remove(); // Close the initial modal
-
-        // Open a new modal with the message
+        modal.remove();
+        
         const messageModal = document.createElement('div');
         messageModal.classList.add('modal');
         messageModal.innerHTML = `
@@ -85,25 +84,23 @@ function showModal() {
         document.body.appendChild(messageModal);
 
         if (name.toLowerCase() === "angela irish alday" && age > 23) {
-            // Play the song if the message is "Hi crush kita"
-            const audio = new Audio('photograph.mp3'); // Replace 'song.mp3' with your actual audio file path
+            const audio = new Audio('photograph.mp3');
             audio.play();
-            audio.loop = true; // Loop the audio if desired
+            audio.loop = true;
 
-            // Stop the audio when the message modal is closed
             document.getElementById('closeMessageModal').addEventListener('click', () => {
                 audio.pause();
-                messageModal.remove(); // Close the message modal
+                messageModal.remove();
             });
         } else {
             document.getElementById('closeMessageModal').addEventListener('click', () => {
-                messageModal.remove(); // Close the message modal
+                messageModal.remove();
             });
         }
     });
 
     document.getElementById('closeModal').addEventListener('click', () => {
-        modal.remove(); // Close the initial modal without submitting
+        modal.remove();
     });
 }
 
