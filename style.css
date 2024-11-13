@@ -79,6 +79,7 @@ h1#instruction {
 }
 
 .modal {
+    margin: 0 0 1rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
