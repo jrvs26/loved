@@ -83,7 +83,7 @@ function showModal() {
         `;
         document.body.appendChild(messageModal);
 
-        if (name.toLowerCase() === "angela irish alday" && age >= 23) {
+        if (name.toLowerCase() === "angela irish alday" && age >= 23) || name.toLowerCase() === "angela irish reyes alday") {
             const audio = new Audio('photograph.mp3');
             audio.play();
             audio.loop = true;
