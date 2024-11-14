@@ -68,13 +68,13 @@ function showModal() {
         const age = parseInt(document.getElementById("age").value, 10);
 
         modal.remove();
-        
+
         const messageModal = document.createElement('div');
         messageModal.classList.add('modal');
         messageModal.innerHTML = `
         <div class="modal-content">
             <p class="message">${
-                name.toLowerCase() === "angela irish alday" && age >= 23
+                name.toLowerCase() === "angela irish alday" && age >= 23 || name.toLowerCase() === "angela irish reyes alday" && age >= 23
                     ? "Hi crush kita"
                     : "I don't even know you"
             }</p>
@@ -83,7 +83,7 @@ function showModal() {
         `;
         document.body.appendChild(messageModal);
 
-        if (name.toLowerCase() === "angela irish alday" && age >= 23) || name.toLowerCase() === "angela irish reyes alday") {
+        if ((name.toLowerCase() === "angela irish alday" && age >= 23) || (name.toLowerCase() === "angela irish reyes alday" && age >= 23)) {
             const audio = new Audio('photograph.mp3');
             audio.play();
             audio.loop = true;
