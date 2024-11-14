@@ -52,7 +52,7 @@ function showModal() {
     <div class="modal-content">
         <form id="nameForm">
             <label for="name">Name:</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <input type="text" name="name" id="name" placeholder="Enter your ull name" required>
             <label for="age">Age:</label>
             <input type="text" name="age" id="age" placeholder="Enter your age" required>
             <button type="submit">Submit</button>
